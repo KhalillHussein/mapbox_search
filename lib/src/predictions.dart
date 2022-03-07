@@ -210,11 +210,15 @@ class Properties {
   String? shortCode;
   String? wikidata;
   String? address;
+  String? category;
+  String? maki;
 
   Properties({
     this.shortCode,
     this.wikidata,
     this.address,
+    this.category,
+    this.maki,
   });
 
   factory Properties.fromRawJson(String str) =>
@@ -226,12 +230,16 @@ class Properties {
         shortCode: json["short_code"] == null ? null : json["short_code"],
         wikidata: json["wikidata"],
         address: json["address"],
+        category: json["category"],
+        maki: json["maki"],
       );
 
   Map<String, dynamic> toJson() => {
         "short_code": shortCode == null ? null : shortCode,
         "wikidata": wikidata,
         "address": address,
+        "category": category,
+        "maki": maki,
       };
 }
 
