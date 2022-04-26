@@ -51,7 +51,8 @@ class ReverseGeoCoding {
     }
 
     if (limit != null) {
-      finalUrl += '&limit=$limit&types=address';
+      finalUrl +=
+          '&limit=$limit&types=address%2Cregion%2Cdistrict%2Cplace%2Cneighborhood%2Cpoi%2Cpostcode%2Clocality%2Ccountry';
     }
 
     if (country != null) {
