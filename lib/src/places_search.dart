@@ -61,7 +61,7 @@ class PlacesSearch {
     return finalUrl;
   }
 
-  Future<List<MapBoxPlace>?> getPlaces(
+  Future<Predictions> getPlaces(
     String queryText, {
     Location? location,
   }) async {
@@ -72,6 +72,6 @@ class PlacesSearch {
       throw Exception(json.decode(response.body)['message']);
     }
 
-    return Predictions.fromRawJson(response.body).features;
+    return Predictions.fromRawJson(response.body);
   }
 }
