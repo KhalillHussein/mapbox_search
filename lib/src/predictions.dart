@@ -25,7 +25,7 @@ class Predictions {
   factory Predictions.fromJson(Map<String, dynamic> json) =>
       Predictions.prediction(
         type: json["type"],
-        query: List<dynamic>.from(json["query"].map((x) => x)),
+        query: List<String>.from(json["query"].map((x) => x)),
         features: List<MapBoxPlace>.from(
             json["features"].map((x) => MapBoxPlace.fromJson(x))),
       );
