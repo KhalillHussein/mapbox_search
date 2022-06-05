@@ -2,7 +2,7 @@ part of mapbox_search;
 
 class Predictions {
   String? type;
-  List<dynamic>? query;
+  List<String>? query;
   List<MapBoxPlace>? features;
 
   Predictions.prediction({
